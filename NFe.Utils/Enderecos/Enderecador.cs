@@ -1162,7 +1162,23 @@ namespace NFe.Utils.Enderecos
 
             #region SC
 
-            //SC usa SRVS para NFe e para NFCe. Rev: 09/09/2015
+            #region Homologação
+
+            foreach (var emissao in emissaoComum)
+            {
+
+                #region NFCe
+
+                addServico(new[] { ServicoNFe.NFeAutorizacao }, versao4, hom, emissao, Estado.SC, nfce, "https://nfce- homologacao.svrs.rs.gov.br/ws/NfeAutorizacao/NFeAutorizacao4.asmx");
+                addServico(new[] { ServicoNFe.NFeRetAutorizacao }, versao4, hom, emissao, Estado.SC, nfce, "https://nfce- homologacao.svrs.rs.gov.br/ws/NfeRetAutorizacao/NFeRetAutorizacao4.asmx");
+                addServico(new[] { ServicoNFe.NfeInutilizacao }, versao4, hom, emissao, Estado.SC, nfce, "https://nfce- homologacao.svrs.rs.gov.br/ws/nfeinutilizacao/nfeinutilizacao4.asmx");
+                addServico(new[] { ServicoNFe.NfeConsultaProtocolo }, versao4, hom, emissao, Estado.SC, nfce, "https://nfce- homologacao.svrs.rs.gov.br/ws/NfeConsulta/NfeConsulta4.asmx");
+                addServico(new[] { ServicoNFe.NfeStatusServico }, versao4, hom, emissao, Estado.SC, nfce, "https://nfce- homologacao.svrs.rs.gov.br/ws/NfeStatusServico/NfeStatusServico4.asmx");
+
+                #endregion
+            }
+
+            #endregion
 
             #endregion
 
